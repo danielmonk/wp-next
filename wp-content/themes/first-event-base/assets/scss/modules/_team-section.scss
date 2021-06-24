@@ -1,0 +1,44 @@
+.team-section {
+  &__repeater {
+  }
+  &__single {
+    margin: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    @media (min-width: $breakpoint-md) {
+      flex-wrap: nowrap;
+    }
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+
+    @media (min-width: $breakpoint-md) {
+      margin-right: 25px;
+      flex: 1;
+    }
+  }
+  &__right {
+    @media (min-width: $breakpoint-md) {
+      margin-: 25px;
+      flex: 5;
+    }
+  }
+  &__image {
+    border-radius: 50%;
+    padding: 25px;
+    max-width: 85%;
+    margin: 0 auto;
+
+    @media (min-width: $breakpoint-md) {
+      padding: 0px;
+    }
+  }
+  &__content{
+    p{
+      strong{
+        font-weight:600;
+      }
+    }
+  }
+}

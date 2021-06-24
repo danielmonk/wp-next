@@ -1,0 +1,27 @@
+.page-id-105 {
+    .wrapper {
+        min-height: initial;
+        background-repeat: repeat-y;
+    }
+}
+.um-activity {
+    padding: 2rem;
+    
+    .um-activity-head {
+        display: none;
+        font-family: $fontBloomUltraThick;
+        font-size: 1.5rem;
+        color: $orange;
+        letter-spacing: 1px;
+        margin-bottom: 2rem;
+    }
+
+    a.um-button {
+        background: $orange !important;
+        height: initial !important;
+
+        &:hover {
+            background: $darkBlue !important;
+        }
+    }
+}

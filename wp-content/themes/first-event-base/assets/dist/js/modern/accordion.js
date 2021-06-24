@@ -1,0 +1,1 @@
+class e{constructor(){this._init_events()}_init_events(){let e=document.getElementsByClassName("resource__toggle");for(var t=0;t<e.length;t++)e[t].addEventListener("click",function(e){let t=e.target||e.srcElement;this.resource_toggle(t)}.bind(this))}resource_toggle(e){console.log(e),e.closest(".resource").classList.toggle("closed")}}export default e;

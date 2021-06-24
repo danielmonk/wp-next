@@ -1,0 +1,23 @@
+.page-title{
+    text-align:center;
+    color:#fff;
+    z-index: 1;
+    height: auto;
+    padding-top: 100px;
+
+    .container, h1{
+        width:100%;
+    }  
+
+    h1{
+        @include font-size(24px);
+    }
+
+    + section{
+        //padding-top:60px;
+
+        @media (min-width: $breakpoint-md) {
+            //padding-top:140px;
+        }
+    }
+}

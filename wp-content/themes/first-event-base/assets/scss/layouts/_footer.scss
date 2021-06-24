@@ -1,0 +1,35 @@
+
+footer {
+    background: $orange;
+    position: relative;
+
+    @media screen and (max-width: $breakpoint-lg) {
+        text-align: center;
+      }
+
+    p, a {
+        color: $white;
+        font-size: 1rem;
+    }
+
+    a {
+        display: inline-block;
+        margin-top:1.5rem;
+    }
+
+    .footer_image_container {
+        text-align: right;
+
+        @media screen and (max-width: $breakpoint-lg) {
+            text-align: center;
+          }
+        
+        img {
+            width: 100px;
+            vertical-align: middle;
+            padding-left: 1rem;
+        }
+    }
+}
+
+

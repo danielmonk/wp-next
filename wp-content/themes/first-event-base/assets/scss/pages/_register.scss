@@ -1,0 +1,28 @@
+.page-template-page-register {
+    
+    h1 {
+        font-family: $fontGestaBold;
+        color: $white;
+    }
+
+    #page-wrapper {
+        position: relative;
+        background-size: 300px;
+        
+        .site-main {
+            position: relative;
+            z-index: 999;
+        }
+    }
+}
+
+// Thank you page
+.page-id-69 {
+    
+    background: url('../img/reg-bg.png') no-repeat;
+    background-size: cover;
+
+    .main {
+        padding-top: 10rem;
+    }
+}

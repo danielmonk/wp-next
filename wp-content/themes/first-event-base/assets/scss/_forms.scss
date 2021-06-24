@@ -1,0 +1,452 @@
+input{
+    font-family: 'Open Sans', sans-serif!important;
+}
+
+#gform_wrapper_1 {
+
+    font-weight:400;
+    margin:0;
+
+    .gform_heading {
+        .gform_title {
+            display: none;
+        }
+    }
+
+    .gform_body {
+
+        h3 {
+            font-weight: 700;
+            padding: 2rem 5rem 1rem 0;
+            color: $grey;
+            display: inline-block;
+            border-bottom: 4px solid $lightblue;
+        }
+
+        label {
+            //text-transform: uppercase;
+            font-weight:400;
+        }
+    }
+
+    h2 {
+        padding: 2rem 0;
+        text-align: center;
+    }
+
+    li {
+        //width: 100% !important;
+        //clear: none !important;
+        //float: left;
+        margin-top: 30px;
+
+        @media (min-width: $breakpoint-md) {
+            //width: 50% !important;
+            margin-top: 40px;
+        }
+
+        .ginput_container_text{
+            margin-top:0;
+        }
+
+        &#field_1_9,
+        &#field_1_3,
+        &#field_1_15,
+        &#field_1_10,
+        &#field_1_20,
+        &#field_1_18,
+        &#field_1_14,
+        &#field_1_22,
+        &#field_1_21,
+        &#field_1_23,
+        &#field_1_25,
+        &#field_1_24 {
+            //width: 100% !important;
+        }
+
+        &#input_1_14_1 {
+            //width: initial !important;
+        }
+
+        &#field_1_19 {
+            //width: 50% !important;
+            //clear: both !important;
+
+            input {
+                &[type="button"] {
+                    width: 200px !important;
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+        &#field_1_13, &#field_1_2{
+            margin-top:0;
+        }
+
+        // &#field_1_28 {
+        //     display: none !important;
+        // }
+
+        .gfield_checkbox{
+            li{
+                position: relative;
+                padding-left:30px!important;
+                margin: 10px 0;
+                overflow: visible;
+                label {
+                    &:after {
+                        content:"";
+                        background:transparent;
+                        width:20px;
+                        height:20px;
+                        display:block;
+                        position: absolute;
+                        left:0;
+                        top:5px;
+                        border-radius:50%;
+                        border:1px solid #273245;
+                        z-index: 0;
+                    }
+                    &:before {
+                        content:"";
+                        background:$purple;
+                        width:12px;
+                        height:12px;
+                        display:block;
+                        position: absolute;
+                        left:4px;
+                        top:0;
+                        border-radius:50%;
+                        z-index: 0;
+                        transition:all 100ms;
+                        opacity:0;
+                    }
+                }
+                input{
+                    opacity:0;
+                    outline:none;
+                    z-index:100;
+                    width:27px;
+                    height:27px;
+                    top:0;
+                    left:0;
+                    position: absolute;
+                    appearance: none;
+                    cursor: pointer;
+                + label {
+                cursor: pointer;
+                }
+                    &:checked + label {
+                        color:$purple;
+                        &:before {
+                            opacity:1;
+                            top: 9px;
+                            //border:2px solid $purple;
+                        }
+                        &:after{
+                            border:2px solid $purple;
+                        }
+                    }
+                }
+            }
+        }
+
+        .gfield_description{
+            font-size: .688em;
+            font-weight:700;
+            line-height:1.75;
+            margin-top:5px;
+
+            a{
+                color:$purple;
+            }
+        }
+
+        .gfield_consent_description{
+            border:0px;
+            padding:0;
+            margin:10px 0 0 0;
+            line-height:1.75;
+            font-size: .9em;
+            font-weight:400;
+            a{
+                color:$purple;
+            }
+        }
+
+        .gfield_consent_label{
+            font-size: .9em;
+            font-weight:400;
+            line-height:1.75;
+        }
+
+        .gfield_consent_label{
+            margin-left:5px;
+        }
+
+        .ginput_container_consent{
+            display:flex;
+            align-items:center;
+            position: relative;
+            label {
+                &:after {
+                    content:"";
+                    background:transparent;
+                    width:20px;
+                    height:20px;
+                    display:block;
+                    position: absolute;
+                    left:0;
+                    top:5px;
+                    border-radius:4px;
+                    border:2px solid #273245;
+                    z-index: 0;
+                }
+                &:before {
+                    content:"";
+                    //background:$purple;
+                    display:block;
+                    position: absolute;
+                    left: 6.5px;
+                    top:0;
+                    border-radius:4px;
+                    z-index: 0;
+                    transition:all 100ms;
+                    opacity:0;
+                    border: solid #fff;
+                    border-width: 0 3px 3px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    width: 7px;
+                    height: 14px;
+                    @media (min-width: $breakpoint-md) {
+                        width: 7px;
+                        height: 15px;
+                    }
+                }
+            }
+            input{
+                opacity:0;
+                outline:none;
+                z-index:100;
+                width:27px;
+                height:27px;
+                top:0;
+                left:0;
+                position: absolute;
+                appearance: none;
+                cursor: pointer;
+            + label {
+            cursor: pointer;
+            }
+                &:checked + label {
+                    color:$purple;
+                    &:before {
+                        opacity:1;
+                        top: 7px;
+                        z-index: 1;
+                        //border:2px solid $purple;
+                    }
+                    &:after{
+                        border:2px solid $purple;
+                        background:$purple;
+                    }
+                }
+            }
+            .gfield_consent_label{
+                padding-left: 25px!important;
+            }
+        }
+    }
+
+    input {
+        width: 100%;
+        border-bottom: 1px solid $lightblue;
+        border-top:0;
+        border-left:0;
+        border-right:0;
+        box-shadow:none;
+        border-radius: 0px;
+        color: $grey;
+        padding: .25rem .5rem;
+
+        @media (min-width: $breakpoint-md) {
+            padding: .5rem;
+        }
+
+        &[type="submit"] {
+            display: flex;
+            color: #fff;
+            align-items: center;
+            //justify-content: center;
+            position: relative;
+            @include font-size(1rem);
+            //line-height: 1.2;
+            //letter-spacing:2px;
+            //background: $orange;
+            //margin: 0 auto;
+            background: rgb(71,0,195);
+            background: linear-gradient(90deg, rgba(71,0,195,1) 0%, rgba(135,1,252,1) 100%);
+            //border: 3px solid transparent;
+            border-radius: 25px!important;
+            padding: 16px 60px 14px 25px!important;
+            //font-weight: 400!important;;
+            //text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            width: auto;
+            -webkit-transition: 0.3s all ease-in-out;
+            transition: 0.3s ease-in-out all;
+            text-align:left;
+            margin: 0;
+            
+            @media (min-width: $breakpoint-md) {
+                padding: 16px 60px 14px 25px!important;
+            }
+
+            &:hover {
+                color:#fff;
+                //background: rgba(42, 122, 176, 0.8);
+                //transform: translateY(-5px);
+                -webkit-box-shadow:  0 20px 25px -5px rgba(0,0,0,0.2),0 10px 10px -5px rgba(0,0,0,0.04);
+                -moz-box-shadow:  0 20px 25px -5px rgba(0,0,0,0.2),0 10px 10px -5px rgba(0,0,0,0.04);
+                box-shadow:  0 20px 25px -5px rgba(0,0,0,0.2),0 10px 10px -5px rgba(0,0,0,0.04);
+              }
+        }
+
+        &[type="checkbox"] {
+            width:auto;
+            margin-left: 0;
+        }
+
+        &#input_1_14_1,
+        &#gf_coupon_code_1,
+        &#ginput_quantity_1_17 {
+            width: initial !important;
+        }
+    }
+
+    select {
+        width: 100%;
+        border: 1px solid $lightblue;
+        border-radius: 5px;
+        padding: 0.5rem;
+    }
+
+    .gfield_checkbox {
+        li {
+            width: 100% !important;
+            display: inline-block;
+
+
+            @media (min-width: $breakpoint-md) {
+                width: 33.333% !important;
+            }
+
+            input {
+                width: initial !important;
+            }
+        }
+    }
+}
+
+
+.gform_footer{
+    &.top_label{
+        width:auto!important;
+        position: relative;
+        display:flex;
+        align-items: center;
+        padding-bottom:0px!important;
+
+
+        &:after{
+            //border-right: 3px solid #fff;
+            //border-bottom: 3px solid #fff;
+            width: 10px;
+            height: 16px;
+            background-image:url(../../images/chevron-right-white-trim.svg);
+            background-size:cover;
+            //transform: rotate(-45deg);
+            content: "";
+            display: block;
+            position: absolute;
+            right:18px;
+            top: 36px;
+            pointer-events: none;
+
+            @media (min-width: $breakpoint-md) {
+                margin-top: 0px;
+                margin-left: 105px;
+                right:auto;
+                top:auto;
+            }
+        }
+    }
+}
+
+.gform_wrapper span.ginput_product_price {
+    color: $lightblue !important;
+    font-weight: 900;            
+} 
+
+.gform_wrapper .field_description_below .gfield_consent_description,
+.gform_wrapper .gfield_consent_description {
+    width:100%;
+    @media (min-width: $breakpoint-md) {
+        //width: 50% !important;
+    }
+}
+
+.gform_confirmation_wrapper {
+    padding: 3rem 0;
+    a{
+        color:$purple;
+    }
+}
+
+.gform_footer{
+    .button{
+        width:100%!important;
+        line-height:1.4!important;
+        @media (min-width: $breakpoint-md) {
+            width:auto!important;
+        }
+    }
+}
+
+// errors
+.gform_legacy_markup_wrapper li.gfield.gfield_error, .gform_legacy_markup_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning{
+    border:0px!important;
+    background:transparent!important;
+}
+
+.gform_legacy_markup_wrapper .gfield_error .gfield_label{
+    color:initial!important;
+}
+
+.gform_legacy_markup_wrapper .validation_message{
+    color:$red!important;
+}
+
+.gform_validation_errors{
+    border:none!important;
+    padding:0px!important;
+}
+
+.gform_submission_error{
+    color:$red!important;
+}
+
+.gform_legacy_markup_wrapper .gfield_required{
+    color:$red!important;
+    margin-left:1px!important;
+}
+
+.gform_legacy_markup_wrapper li.gfield_error div.ginput_complex.ginput_container label, .gform_legacy_markup_wrapper li.gfield_error ul.gfield_checkbox, .gform_legacy_markup_wrapper li.gfield_error ul.gfield_radio{
+    color:$red!important;
+}

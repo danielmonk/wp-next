@@ -1,0 +1,65 @@
+.zoom-wp-gutenberg-block {
+    position: relative;
+    padding: 1em;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    color: #1e1e1e;
+    -moz-font-smoothing: subpixel-antialiased;
+    -webkit-font-smoothing: subpixel-antialiased;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: inset 0 0 0 1px #1e1e1e;
+    outline: 1px solid transparent;
+}
+
+.zoom-wp-gutenberg-block .zoom-block-desc {
+    font-size: 13px;
+    display: block;
+    margin-bottom: 1em;
+}
+.zoom-wp-gutenberg-block .zoom-block-container {
+    font-size: 13px;
+    display: inline-block;
+    margin-top: 1em;
+    width: 10em;
+}
+
+.zoom-wp-gutenberg-block .zoom-block-heading {
+    display: inline-block;
+    margin: 10px;
+    font-weight: 400;
+    font-size: 18pt;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+}
+
+.zoom-wp-gutenberg-block .zoom-block-icon {
+    width: 32px;
+    height: 32px;
+    display: inline;
+    border-radius: 9px;
+}
+
+.zoom-wp-gutenberg-block .zoom-block-input, .zoom-block-select {    
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+    padding: 8px 8px;
+    box-shadow: 0 0 0 transparent;
+    transition: box-shadow .1s linear;
+    border-radius: 2px;
+    border: 1px solid #757575;
+    line-height: normal;
+    margin: 0 8px 0 0;
+    flex: 1 1 auto;
+    color: #808285;
+    font-weight: normal;
+}
+
+.zoom-wp-gutenberg-block .zoom-block-url {
+    min-width: 300px;
+}
+
+.zoom-wp-gutenberg-block .zoom-block-link {    
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8em;
+}

@@ -1,0 +1,1 @@
+import e from"@glidejs/glide";let l=document.querySelector(".glide");if(l){var o=new e(".glide",{gap:50,autoplay:4e3,type:"carousel"});o.mount()}

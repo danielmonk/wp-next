@@ -1,0 +1,272 @@
+body {
+    font-family: $fontGestaRegular;
+}
+
+h2 { 
+    font-family: $fontBloomUltraThick;
+    font-size: 3.3rem;
+    color: $orange;
+    letter-spacing: 1px;
+}
+
+
+h3 {
+    font-family: $fontGestaRegular;
+    color: $white;
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+
+    @media screen and (max-width: 768px) {
+        font-size: 2rem;
+    }
+}
+
+h4 { 
+    font-family: $fontGestaRegular;
+    color: $white;
+    font-size: 2.8rem;
+}
+
+h5 { 
+    color: $white;
+    font-size: 2rem;
+    margin: 0;
+}
+
+h6 { 
+
+}
+
+p, li {
+    font-size: 1.3rem;
+
+    strong {
+       font-family: $fontGestaBold;
+    }
+}
+
+text,
+tspan {
+    font-family: $fontBloomUltraThick;
+    font-style: normal;
+    text-transform: initial;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+ul {
+    li {
+        margin: 0.8rem 0;
+        padding-left: 1rem;
+        color: $white;
+
+        strong {
+            font-family: $fontGestaBold;
+            font-weight: 900;
+        }
+    }
+}
+
+a {
+    cursor: pointer;
+    transition: .2s ease all;
+    text-decoration: none;
+
+    &.button {
+        font-family: $fontGestaBold;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: block;
+        padding: .5rem 1rem;
+        text-align: center;
+        max-width: 440px;
+        margin: 0 auto;
+        border: 3px solid transparent;
+        border-radius: 5px;
+        font-size: 1.8rem;
+        background: $orange;
+        color: white;
+
+        @media screen and (max-width: 768px) {
+            font-size: 1.45rem;
+            width: 90%;
+            max-width: 90%;
+            padding: .5rem 1rem !important;
+        }
+
+        &:hover {
+            background: $white;
+            border-color: $orange;
+            color: $orange;
+        }
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+button,
+button.button {
+    font-family: $fontGestaBold;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: block;
+    padding: .5rem 1rem;
+    text-align: center;
+    max-width: 440px;
+    margin: 0 auto;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    font-size: 1.8rem;
+}
+
+.the-stage-btn {
+    margin-top: 5rem !important;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+iframe {
+    width: 100%;
+    border: none;
+}
+
+.gform_wrapper {
+    a {
+        display: initial;
+        margin: initial;
+        padding: initial;
+    }
+}
+
+.BaseButton-mQq4.jstest-leave-room-button {
+    display: none !important;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /*tooltip Box*/
+.con-tooltip {
+    position: absolute;
+    background: transparent;
+    padding: 0;
+    display: inline-block;
+    transition: all .3s ease-in-out;
+    cursor: default;
+    top: 64%;
+    left: 30%;
+    width: 209px;
+    height: 51px;
+
+    &:hover {
+        .tooltip {
+            visibility: visible;
+            transform: translateY(-10px);
+            opacity: 1;
+            transition: .3s linear;
+            animation: tooltipHover 1s ease-in-out infinite  alternate;
+          
+          }
+      } 
+  }
+
+  @keyframes tooltipHover {
+    0%{
+      transform: translateY(6px);	
+    }
+  
+    100%{
+      transform: translateY(1px);	
+    }
+  }
+  
+  /*tooltip */
+  .tooltip {
+    visibility: hidden;
+    z-index: 1;
+    opacity: .40;
+    width: 250px;
+    padding: 0px 20px;
+    position: absolute;
+    top: -260%;
+    left: -25%;
+    border-radius: 9px;
+    font: 16px;
+    transform: translateY(9px);
+    transition: all 0.3s ease-in-out;
+
+    &::after {
+        content: " ";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 12px 12.5px 0 12.5px;
+        border-color: #333 transparent transparent transparent;
+        position: absolute;
+        left: 40%;
+      }
+
+      a {
+          cursor: auto;
+      }
+    }
+  
+.top:hover {
+    transform: translateY(-6px); 
+}
+  

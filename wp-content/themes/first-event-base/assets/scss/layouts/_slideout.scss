@@ -1,0 +1,115 @@
+
+#slideout {
+    position: fixed;
+    top: 22.4%;
+    right: 0;
+    transition-duration: 0.3s;
+    background: $orange;
+    cursor: pointer;
+    z-index: 99;
+
+    &.out {
+        right: 377px;
+        
+        @media screen and (max-width: $breakpoint-lg) {
+            right: 248px;
+        }
+
+        #slideout_inner {
+            right: 0;
+        }
+    }
+
+    h3 {
+        color:$white;
+        font-family: $fontBloomUltraThick;
+        transform: rotate(90deg);
+        margin: 1rem 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        @media screen and (max-width: $breakpoint-lg) {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+    }
+
+    .tab {
+        .tab_menu {
+            clear:both;
+
+            ul {
+                padding-left: 0;
+                
+                li {
+                    text-align: center;
+                    cursor: pointer;
+                    list-style: none;
+                    color: $white;
+                    font-family: $fontBloomUltraThick;
+                    letter-spacing: 1px;
+
+                    @media screen and (max-width: $breakpoint-lg) {
+                        width: 100%;
+                    }
+    
+                    &.selected,
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .tab_box {
+            clear: both;
+            max-width: 350px;
+
+            .tab_box_inner:nth-of-type(2) {
+                display: none;
+            }
+        }
+
+        .hide {
+            display: flex;
+        }
+
+        .show {
+            display: flex;
+        }
+    }
+
+    #slideout_inner {
+        width: 26%;
+        max-width: 350px;
+        padding: 1.5rem;
+        position: fixed;
+        top: 22.4%;
+        right: -120%;
+        background: $orange;
+        transition-duration: 0.3s;
+        cursor: initial;
+
+        h4 {
+            color: $white;
+            font-size: 1.5rem;
+        }
+
+        h5 {
+            color: $white;
+            font-family: $fontBloomUltraThick;
+            letter-spacing: 1px;
+            font-weight: strong;
+            font-size: 1.4rem;
+        }
+
+        p {
+            margin: 0.5rem;
+            color: $white;  
+        }
+
+        .agenda__headings {
+
+        }
+    }
+}

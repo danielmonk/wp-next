@@ -1,0 +1,1 @@
+import o from"jquery";window.jQuery=o,window.$=o,global.jQuery=o,jQuery=o;import e from"aos";e.init({duration:800,once:!0,disable:"mobile"}),jQuery(document).ready((function(){jQuery(document).on("gform_confirmation_loaded",(function(o,r){console.log("refreshed"),e.refresh()}))}));

@@ -1,0 +1,239 @@
+//@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@font-face {
+  font-family: "VMCirculaChat";
+  src: url("../fonts/VMCircularChat-Book.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "VMCirculaChat";
+  src: url("../fonts/VMCircularChat-BookItalic.otf") format("opentype");
+  font-weight: normal;
+  font-style: 'Italic';
+}
+@font-face {
+  font-family: "VMCircularNatter";
+  src: url("../fonts/VMCircularNatter-Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "VMCircularNatter";
+  src: url("../fonts/VMCircularNatter-MediumItalic.otf") format("opentype");
+  font-weight: normal;
+  font-style: 'Italic';
+}
+@font-face {
+  font-family: "VMCircularShout";
+  src: url("../fonts/VMCircularShout-Bold.otf") format("opentype");
+  font-weight: '700';
+  font-style: normal;
+}
+@font-face {
+  font-family: "VMCircularShout";
+  src: url("../fonts/VMCircularShout-BoldItalic.otf") format("opentype");
+  font-weight: '700';
+  font-style: 'Italic';
+}
+@font-face {
+  font-family: "VMCircularWhisper";
+  src: url("../fonts/VMCircularWhisper-Light.otf") format("opentype");
+  font-weight: '300';
+  font-style: normal;
+}
+@font-face {
+  font-family: "VMCircularWhisper";
+  src: url("../fonts/VMCircularWhisper-LightItalic.otf") format("opentype");
+  font-weight: '300';
+  font-style: 'Italic';
+}
+@font-face {
+  font-family: "VMCircularWhisper";
+  src: url("../fonts/VMCircularWhisper-LightItalic.otf") format("opentype");
+  font-weight: '300';
+  font-style: 'Italic';
+}
+@font-face {
+  font-family: "VMCircularYell-Black";
+  src: url("../fonts/VMCircularYell-Black.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "VMCircularYell-Black";
+  src: url("../fonts/VMCircularYell-BlackItalic.otf") format("opentype");
+  font-weight: normal;
+  font-style: 'italic';
+}
+
+body {
+  font-family: 'VMCirculaChat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+   //font-family: azo-sans-web, sans-serif;
+  //font-weight: 700;
+  //font-weight: 300;
+  //line-height: 25px;
+  //text-transform: uppercase;
+  //color: $orange;
+  margin: 0 0 15px 0;
+  @include font-size(108px);
+  //color: $orange;
+
+  position: relative;
+}
+
+h2 {
+  //font-family: 'Intro-Inline', serif;
+  font-weight: 600;
+  font-style: normal;
+  //text-transform: uppercase;
+  //color: $white;
+  @include font-size(1.2rem);
+  line-height: 1.2;
+  padding-bottom: 20px;
+  margin: 0;
+  //letter-spacing:2.2px;
+ // color: #fff;
+
+  strong{
+    //font-weight:700;
+    text-shadow: 0 0 2px $gold;
+    font-family: 'VMCircularShout', sans-serif;
+  }
+
+  &.home{
+    @include font-size(2rem);
+    text-align:center;
+    position: relative;
+    &:after{
+      content:"";
+      bottom:0px;
+      left:0;
+      right:0;
+      background-color:#000;
+      height:1px;
+      width:87.5%;
+      position: absolute;
+      margin: 0 auto;    
+    }
+  }
+}
+
+h3 {
+  //font-family: azo-sans-web, sans-serif;
+  //font-weight: 700;
+  //font-weight: 300;
+  //line-height: 25px;
+  //text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 15px 0;
+  @include font-size(27px);
+  //color: $orange;
+
+  position: relative;
+  /*
+  &:after {
+    content: "";
+    height: 3px;
+    width: 70px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    background: #000;
+    margin: 0 auto;
+  }
+  */
+}
+
+h4 {
+  @include font-size(24px);
+  //font-weight:300!important;
+  color: #fff;
+  text-transform: none!important;
+  font-family: 'Open Sans', sans-serif!important;
+}
+
+h5{
+  color: #fff;
+  @include font-size(18px);
+}
+
+h6{
+  color: #fff;
+  @include font-size(14px);
+  text-transform: none!important;
+}
+
+p {
+  //font-family: azo-sans-web, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  //@include font-size(2rem);
+  line-height: 1.4;
+  //color: #fff;
+  //letter-spacing:0.5px;
+
+  strong{
+    font-weight:bold;
+    //color:$lightblue;
+  }
+
+  a{
+    color:$red;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  //color: #fff;
+  font-weight: 700;
+  //font-family:'Times New Roman', Times, serif;
+  font-family: 'VMCircularYell-Black', sans-serif;
+  // -webkit-text-stroke-width: 2px;
+  //text-transform: uppercase;
+  margin: 1em 0;
+}
+
+/* Azo sans black
+    font-family: azo-sans-web, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+ */
+
+/* Azo sans bold
+    font-family: azo-sans-web, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+ */
+
+/* Azo sans regular
+    font-family: azo-sans-web, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+ */
+
+/* Azo sans meduim 
+    font-family: azo-sans-web, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+*/
+
+.helvetica-neue{
+  font-family: 'HelveticaNeue', Sans-Serif;
+}
+
+input, select{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.red{
+  color:$red;
+}

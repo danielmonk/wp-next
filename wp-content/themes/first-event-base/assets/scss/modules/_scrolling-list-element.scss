@@ -1,0 +1,56 @@
+.scrolling-list-element {
+  display: grid;
+  grid-template-columns: 1fr 7em;
+  max-width: 100em;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: 1fr 15em;
+  }
+  nav {
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+    padding-left: 0;
+    border-left: 1px #efefef solid;
+    a {
+      text-decoration: none;
+      display: block;
+      padding: 0;
+      color: #ccc;
+      font-weight: 300;
+      transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+      &:hover,
+      &:focus {
+        color: $yellow;
+      }
+    }
+    ol {
+      list-style: none;
+      li {
+        padding: 5px 0;
+        &.active {
+          a {
+            color: $yellow;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+  .scrolling-section {
+    //padding-bottom:20rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    //height:75vh;
+    padding-bottom: 50vh;
+    align-content: center;
+    padding-right: 40px;
+    h3 {
+      color: $lightblue;
+      width: 100%;
+    }
+  }
+}

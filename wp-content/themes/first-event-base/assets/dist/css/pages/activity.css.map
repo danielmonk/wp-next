@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/activity.scss"],"names":[],"mappings":"AAAA,aACI,QAAA,KADJ,mCAIQ,MAAA","file":"activity.css","sourcesContent":[".um-activity {\n    padding: 2rem;\n    \n    .um-activity-textarea {\n        width: 100%;\n    }\n}\n"]}

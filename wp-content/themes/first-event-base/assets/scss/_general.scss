@@ -1,0 +1,274 @@
+* {
+  //scroll-margin-top: 100px;
+  //scroll-margin-top: 100px;
+}
+
+body {
+  margin: 0;
+  //font-family:Times, serif;
+  //background-color: $blue;
+  position: relative;
+  color:#fff;
+  @include font-size(14px);
+  line-height: 1.4;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  //visibility:hidden;
+
+  &.modal-open{
+    overflow:hidden;
+  }
+}
+
+/*
+:target:before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin: -100px 0 0;
+}
+
+.chrome{
+  :target:before {
+    content: "";
+    display: block;
+    height: 0px;
+    margin:0;
+  }
+}
+*/
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.main {
+  //min-height: calc(100vh - 290px);
+  //background:$darkgrey;
+  //display: flex;
+  //align-items: center;
+  //margin-top:96px;
+  padding-bottom:100px;
+  @media (min-width: $breakpoint-md) {
+    //margin-top:96px;
+  }
+
+
+  &--flex {
+    display: flex;
+    align-items: center;
+  }
+
+  &--full{
+      min-height: calc(100vh);
+      background:$darkgrey;
+      display: flex;
+      align-items: center;
+      background-size:cover;
+  }
+}
+
+.container-lg {
+  max-width: 1900px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  //padding: 0px 15px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding:0 15px;
+  position: relative;
+  @media (min-width: $breakpoint-md) {
+    // /flex-wrap: nowrap;
+    padding:0 30px;
+  }
+
+  &--full{
+    max-width:100%;
+    padding:0;
+    display:block;
+  }
+
+  &--sm {
+    max-width: 580px;
+  }
+
+  &--md {
+    max-width: 1024px;
+  }
+
+  &--lg {
+    max-width: 1900px;
+  }
+
+  &--no-flex {
+    display: block;
+  }
+}
+
+.col {
+  margin: 0 15px;
+  z-index: 1;
+  &:only-child {
+    @media (min-width: $breakpoint-md) {
+      //width: auto;
+    }
+  }
+}
+
+.container-md {
+  max-width: 730px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.container-sml {
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.flex {
+  display: flex;
+  //justify-content: space-between;
+  position: relative;
+  width: 100%;
+  &.centered {
+    align-items: center;
+  }
+}
+
+.banner {
+  background-image: url(../../images/bg4-01.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 400px;
+  * {
+    color: #fff;
+  }
+}
+
+.banner-two {
+  background-image: url(../../images/bg5-01.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 400px;
+  * {
+    color: #fff;
+  }
+}
+
+.heading-container {
+  padding-top: 50px;
+
+  .heading-wrapper {
+    //background-color: $orange;
+    //max-width: 550px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 100%;
+      left: -500px;
+      background-color: $orange;
+    }
+  }
+}
+
+.reg-cta,
+.button {
+  //@extend %reg;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+}
+
+iframe {
+  width: 100%;
+  @media (min-width: $breakpoint-md) {
+    //min-height: 100vh;
+  }
+  &.question {
+    .nav,
+    #wpadminbar {
+      display: none;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+
+  &.aligncenter{
+    margin:0 auto;
+  }
+}
+
+.align-center{
+  p{
+    text-align:center;
+  }
+}
+
+a {
+  color: inherit;
+  transition: 0.2s ease-in-out all;
+  //text-decoration:underline;
+  &:hover {
+    cursor: pointer;
+    //color: $green;
+  }
+}
+
+ul{
+  padding-left:1.75em;
+  li{
+    margin-bottom:10px;
+  }
+}
+
+p{
+  margin:1em 0;
+}
+
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}

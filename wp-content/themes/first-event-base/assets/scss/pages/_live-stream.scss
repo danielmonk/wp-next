@@ -1,0 +1,16 @@
+.page-live-stream{
+    .page-title+section{
+        padding-top: 120px;
+        @media (min-width: $breakpoint-md) {
+            padding-top:initial;
+        }
+    }
+    .page-title{
+        h1{
+            color:#fff;
+        }
+    }
+    footer{
+        background:#fff;
+    }
+}

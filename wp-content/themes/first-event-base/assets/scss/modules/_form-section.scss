@@ -1,0 +1,66 @@
+.form-section{
+    &__intro{
+        width:100%;
+        h2{
+            color:$purple;
+            @media (min-width: $breakpoint-md) {
+                padding-right: 40%;
+            }
+        }
+        h3{
+            //color:#fff;
+    
+            @media (min-width: $breakpoint-md) {
+                padding-right: 40%;
+                &:after{
+                    content: '';
+                    background-image: url(../../images/graphics-arrow.svg);
+                    background-size: contain;
+                    position: absolute;
+                    left: 0px;
+                    bottom: -125px;
+                    width: 85px;
+                    height: 86px;
+                    background-repeat: no-repeat;
+                    //-webkit-transform: scaleX(-1);
+                    //transform: scaleX(-1);
+                }
+            }
+
+            @media (min-width: 850px) {
+                &:after{
+                    left: 10px;
+                    width: 155px;
+                }
+            }
+        }
+    }
+
+    &__content{
+        width:100%;
+        //margin:0 0 40px;
+        @media (min-width: $breakpoint-md) {
+            width:70%;
+            margin:0 auto;
+        }
+    }
+    &__socials{
+        width:100%;
+        display:flex;
+
+        .nsl-container-buttons{
+            flex-flow:column!important;
+            align-items: center!important;
+            @media (min-width: $breakpoint-lg) {
+                flex-flow:row!important;
+            }
+
+            a{
+                margin:10px!important;
+            }
+        }
+    }
+    &__social{
+        flex:1;
+    }
+}

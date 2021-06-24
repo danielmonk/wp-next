@@ -1,0 +1,23 @@
+.home{
+    header{
+        display:none;
+        .menu__toggle{
+            //display:none;
+        }
+        .menu-item{
+        
+        }
+    }
+    footer{
+        //margin:0;
+    }
+    .page-title{
+        display:none;
+    }
+    .hidden{
+        display:inline-block!important;
+    }
+    .main{
+        margin-top:0;
+    }
+}

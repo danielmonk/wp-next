@@ -1,0 +1,332 @@
+
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    //visibility: hidden;
+    //opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1001;
+    text-align:center;
+
+    &:target, &.modal-closed{
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .close{
+        position: absolute;
+        right: 30px;
+        //top: 0px;
+        text-decoration:none;
+        color:$orange;
+        display: flex;
+        align-items: center;
+        @include font-size(2.5rem);
+    }
+
+    .popup{
+        background:#fff;
+        //border:4px solid $gold;
+        //color:#fff;
+        //padding:25px 25px 50px 25px;
+        max-width: 365px;
+        text-align:center;
+        width:100%;
+        position: relative;
+        margin:0 15px;
+        border-radius:20px;
+        box-shadow:0px 9px 20px rgba(0,0,0,0.32);
+        .login-remember{
+            display:none
+        }
+        &__top{
+            display:flex;
+            justify-content:space-between;
+            margin-bottom:10px;
+            align-items:center;
+            position: relative;
+            background:$red;
+            border-radius:20px 20px 0 0;
+            padding:0 30px;
+            p{
+                font-weight:500;
+                padding-left:35px;
+                margin:15px 0;
+            }
+            .login-icon{
+                position:absolute;
+                left:30px;
+            }
+        }
+        h2 {
+            color:$gold;
+            @include font-size(3rem);
+            font-weight:500;
+            //line-height:1.5;
+        }
+        h3{
+            color:$gold;
+            @include font-size(2.5rem);
+            font-weight:500;
+            margin: 0 auto;
+        }
+        .col{
+            width:100%;
+            margin:0 30px;
+        }
+        form{
+            //padding:0 15px;
+            p{
+                &:before{
+                    content:"";
+                    background: #fff;
+                    height: 7px;
+                    width: 65px;
+                    position: absolute;
+                    top: 0px;
+                    left: 12px;
+                    z-index: 0;
+                }
+                &.login-username{
+                    &:before{
+                        width:45px;
+                    }
+                }
+            }
+        }
+        p{
+            position: relative;
+            &.confirm{
+                width:100%;
+                font-weight:500;
+                margin-bottom:30px;
+                @include font-size(22px);
+                text-align:left;
+            }
+        }
+        label{
+            //display:none;
+            position: absolute;
+            top: -9px;
+            left: 16px;
+            @include font-size(12px);
+            font-weight: 500;
+            color:#333;
+        }
+        input{
+            width:100%;
+            padding: 14px 20px;
+            border-radius:5px;
+            border:1px solid #333;
+            @include font-size(18px);
+            &::placeholder{
+                opacity:0.4;
+            }
+        }
+        .login-submit{
+            display:flex;
+            margin-top:20px!important;
+            margin-bottom:5px!important;
+            flex-wrap:wrap;
+            @media (min-width: $breakpoint-xs) {
+                flex-wrap:nowrap;
+            }
+            input, .button{
+                @include font-size(16px);
+                margin-bottom:15px;
+                flex:1;
+                justify-content: center;
+                border:0px;
+                &[type="cancel"]{
+                    color:#fff;
+                    background:$grey;
+                    border:none;
+                    margin-left:0;
+                    @media (min-width: $breakpoint-xs) {
+                        margin-right:5px;
+                        margin-bottom:0px;
+                    }
+                }
+                &[type="submit"]{
+                    margin-right:0;
+                    color:#fff;
+                    background:$red;
+                    @media (min-width: $breakpoint-xs) {
+                        margin-left:5px;
+                        margin-bottom:0px;
+                    }
+                }
+                &.button{
+                    font-weight: 500!important;
+                }
+                &.close{
+                    position:relative;
+                    right:0;
+                }
+            }
+        }
+        .login-custom-field-wrapper{
+            @include font-size(12px);
+            color:$red;
+            margin:15px 0;
+            font-weight:700;
+            //text-decoration: none;
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+
+    .buttons-wrapper{
+        display:flex;
+        justify-content: center;
+        margin-top:40px;
+        .btn{
+           
+        }
+    }
+    &#popup-logout{
+        .login-submit{
+            margin-bottom:30px!important;
+        }
+    }
+}
+
+// modal section
+.modal-section{
+    &__triggers{
+        display:flex;
+        margin:20px auto 0;
+        width:100%;
+        flex-wrap:wrap;
+        &.text{
+            .modal-section__trigger{
+                min-width: 20%;
+            }
+        }
+    }
+    &__trigger{
+        flex:1;
+        margin:7.5px;
+        //padding:15px 30px;
+        border:3px solid #ccc;
+        border-radius:12px;
+        text-align:center;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        //max-width: 10%;
+        padding:10px;
+        transition:0.2 ease-in-out background;
+        //min-width: 20%;
+
+        @media (min-width: $breakpoint-md) {
+            //padding:15px 50px;
+            //max-width: 10%;
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        &:after{
+            content:"+";
+            position: absolute;
+            right: 4px;
+            top: -6px;
+            color:$navy;
+            font-size:24px;
+        }
+ 
+        &.selected{
+            //border:3px solid #ccc;
+            background:$red;
+            &:after{
+                content:"-";
+                color:#fff;
+                right:8px;
+            }
+        }
+
+        p{
+            margin: 0;
+            padding: 0;
+        }
+        strong{
+            padding: 10px 0;
+            display:block;
+            font-size: 1rem; 
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+        img{
+            max-width:65px;
+        }
+    }
+    &__contents{
+        margin:0 auto;
+        text-align: center;
+        overflow:hidden;
+        //margin:50px  0;
+        //padding:50px;
+        //background:$lightestblue;
+        width:100%;
+        //min-height:1300px;
+        position: relative;
+        display:block;
+        &.hide{
+            display:none;
+        }
+    }
+    &__content{
+        display:none;
+        //opacity:0;
+        //visibility: hidden;
+        //height:0;
+        transition:0.2 ease-out opacity;
+        height:100%;
+        //position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        &.selected{
+            //opacity:1;
+            //visibility: visible;
+            //height:100%;
+            display:block;
+            background:$lightestblue;
+            margin:50px 0 0;
+            padding: 15px;
+            height:550px;
+            @media (min-width: $breakpoint-md) {
+                padding: 50px;
+                height:1600px;
+            }
+        }
+        p{
+            margin:0;
+            height:100%;
+        }
+    }
+    &__intro{
+        width:100%;
+    }
+    &__button{
+        width:100%;
+        text-align:center;
+        margin:30px auto 0;
+    }
+}

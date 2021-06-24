@@ -1,0 +1,33 @@
+#agenda{
+    ul{
+        list-style:none!important;
+        padding:0px!important;
+        li{
+            margin-bottom:40px;
+            ul{
+                li{
+                    margin-bottom:0;
+                }
+            }
+            span{
+                margin:5px 0;
+                font-weight:bold;
+                @include font-size(1.6rem);
+                display:inline-block;
+                &.time{
+                    //font-weight:bold;
+                    //@include font-size(2rem);
+                }
+                &.title{
+                    color:$gold;
+                    font-weight: 300;
+                    font-weight:1px;
+                    @include font-size(3rem);
+                }
+                &.padded{
+                    padding:5px 0;
+                }
+            }
+        }
+    }
+}

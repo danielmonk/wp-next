@@ -1,0 +1,56 @@
+.live-stream-wrapper {
+    margin-top: 50px;
+    .live-stream {
+        flex-basis: 70%;
+    }
+
+    .chat {
+        flex-basis: 25%;
+        p {
+            margin: 0;
+        }
+
+        .reg-cta {
+            width: 100%;
+        }
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .live-stream-wrapper {
+        .live-stream {
+            flex-basis: 100%;
+        }
+
+        .chat {
+            flex-basis: 100%;
+        }
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) 
+and (max-width: 768px) {
+    .live-stream-wrapper {
+        .live-stream {
+            flex-basis: 100%;
+        }
+
+        .chat {
+            flex-basis: 100%;
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px)
+and (max-width: 991px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 992px)
+and (max-width: 1200px) {
+   
+}

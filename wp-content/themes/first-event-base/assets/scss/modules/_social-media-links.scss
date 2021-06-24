@@ -1,0 +1,85 @@
+// Variables
+$social-media-link-dimensions: 50px !default;
+$social-media-link-border-radius: 4px !default;
+$social-media-link-color: #fff !default;
+$social-media-link-font-size: 26px !default;
+$social-media-link-space-between: 4px !default;
+$social-media-link-hover-top-shifting: -16px !default;
+$social-media-color-facebook: #5f7aae;
+$social-media-color-twitter: #5ac2f0;
+$social-media-color-instagram: #4d4d4d;
+$social-media-color-linkedin: #4390b5;
+$social-media-color-youtube: #c34a47;
+
+$backgrounds: (
+  "facebook": $social-media-color-facebook,
+  "twitter": $social-media-color-twitter,
+  "instagram": $social-media-color-instagram,
+  "linkedin": $social-media-color-linkedin,
+  "youtube": $social-media-color-youtube,
+);
+
+@each $network, $color in $backgrounds {
+  .social-media-links__single--#{$network} {
+    &:before {
+      background-image: linear-gradient(
+        45deg,
+        rgba(51, 51, 51, 1) 0%,
+        rgba(51, 51, 51, 1) 49%,
+        $color 50%
+      );
+    }
+  }
+}
+
+.social-media-links {
+  padding: 0px;
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 90px;
+    //justify-content: center;
+    //margin-top: 100px;
+  }
+  &__single {
+    width: $social-media-link-dimensions;
+    height: $social-media-link-dimensions;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: $social-media-link-color;
+    font-size: $social-media-link-font-size;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+    margin: 0 10px;
+    > svg {
+      z-index: 1;
+      fill: #fff;
+    }
+    &:before {
+      width: $social-media-link-dimensions;
+      height: $social-media-link-dimensions;
+      border-radius: $social-media-link-border-radius;
+      content: "";
+      position: absolute;
+      background-size: 300%;
+      background-position: 0% 0%;
+      transition: background-position 0.55s cubic-bezier(0.79, 0.14, 0.15, 0.86);
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      transform: translateY($social-media-link-hover-top-shifting);
+      /* This padding-bottom helps the pointer do stay inside the link,
+          avoiding the animation to flicker. */
+      padding-bottom: abs($social-media-link-hover-top-shifting) * 2;
+      &:before {
+        background-position: top right;
+      }
+    }
+    + .social-media-link {
+      margin-left: $social-media-link-space-between;
+    }
+  }
+}

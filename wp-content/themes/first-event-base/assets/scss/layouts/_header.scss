@@ -1,0 +1,177 @@
+header {
+    position: fixed;
+    width: 100%;
+    background: $white;
+    z-index: 9999;
+    transition: .2s ease all;
+
+    @media screen and (max-width: 768px) {
+        text-align: center;
+        padding-left: 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .container-fluid {
+        @media screen and (max-width: $breakpoint-md) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &.nav-up {
+        height: 90px;
+
+        @media screen and (max-width: 768px) {
+            height: initial;
+        }
+        .logo-container {
+
+            h1 {
+                a {
+                    font-size: 3rem;
+                }
+
+                span {
+                    div {
+                        width: 35px;
+                        height: 35px;
+                        margin: .6rem -.5rem;
+
+                        @media screen and (max-width: $breakpoint-md) {
+                            width: 25px;
+                            height: 25px;
+                            margin: 0.4rem -0.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .logo-container {
+        h1 {
+            a {
+                font-family: $fontBloomUltraThick;
+                font-size: 4.5rem;
+                color: $green;
+                text-transform: uppercase;
+                margin: initial;
+
+                @media screen and (max-width: $breakpoint-lg) {
+                    font-size: 2.5rem;
+                }
+            }
+
+            span {
+                color: $darkBlue;
+
+                div {
+                    border-radius: 50%;
+                    background: $darkBlue;
+                    position: relative;
+                    width: 60px;
+                    height: 60px;
+                    margin: 0.8rem -.5rem;
+                    vertical-align: top;
+                    display: inline-block;
+                    overflow: hidden;
+
+                    @media screen and (max-width: $breakpoint-lg) {
+                        width: 30px;
+                        height: 30px;
+                        margin: .6rem -.5rem;
+                    }
+
+                    img {
+                        vertical-align: top;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-47%,-50%);
+                        animation: fastForward 6s infinite;
+                        animation-delay: 3s;
+                    }
+
+                    @keyframes fastForward {
+                        0%,
+                        100% {
+                          left: 50%;
+                          opacity: 1;
+                        }
+
+                        10% {
+                            left: 200px;        
+                        }
+
+                        20% {
+                            opacity: 0;
+                        }
+
+                        30% {
+                            left: -100px;
+                        }
+
+                        31% {
+                            opacity: 1;
+                        }
+
+                        40% {
+                            left: 50%;
+                            opacity: 1;
+                        }
+
+                        // 35% {
+                        //     opacity: 1;
+                        // }
+
+                        // 40% {
+                        //     left: 0;
+                        // }
+
+                        // 50% {
+
+                        // }
+
+                        // 90% {
+                        //     left: 200px;
+                        //     opacity: 1;
+                        // }
+
+                        // 91% {
+                        //     opacity: 0;
+                        // }
+                      }
+                }
+            }
+
+            @media screen and (max-width: $breakpoint-lg) {
+                margin: 0;
+            }
+        }
+    }
+
+    &.nav-up {
+        height: 100px;
+
+        @media screen and (max-width: 768px) {
+            height: initial;
+        }
+
+        img {
+            width: 50%;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+        }
+    }
+
+    img {
+        transition: .2s ease all;
+
+        @media screen and (max-width: 768px) {
+            width: 50%;
+        }
+    }
+} 

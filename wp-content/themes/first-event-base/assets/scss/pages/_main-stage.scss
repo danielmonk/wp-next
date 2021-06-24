@@ -1,0 +1,11 @@
+.page-template-page-live-stream {
+    .banner-container {
+        &:before {
+            display: none;
+        }
+    }
+
+    #page-wrapper {
+        color: $white;
+    }
+}

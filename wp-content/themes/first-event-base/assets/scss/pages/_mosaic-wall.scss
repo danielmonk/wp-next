@@ -1,0 +1,8 @@
+.page-mosaic-wall{
+    .container--no-flex{
+        @media (min-width: $breakpoint-md) {
+            max-width:75%;
+            margin:0 auto;
+        }
+    }
+}

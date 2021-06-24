@@ -1,0 +1,396 @@
+html, body {
+  overflow: visible;
+}
+
+body .zoom-window-wrap {
+  margin-bottom: 15px;
+}
+
+.zoom-window-wrap-half {
+  width: calc(66.666666666667% - ( ( 4% ) * 0.66666666666667 ) );
+}
+
+body .zoom-window-wrap .meeting-view p:first-child {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.zoom-window-wrap .zoom-thankyou-msg {
+  padding-top: 15px;
+}
+
+.zoom-iframe-container, .recording-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* padding-top: 56.25%; 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  min-height: 77vh;
+}
+    
+.zoom-iframe-container iframe, .recording-container video, .recording-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.recording-container video {
+  background-color: black;
+}
+
+.zoom-window-wrap .meeting-form select, .zoom-window-wrap .meeting-form input[type="text"], .zoom-window-wrap .meeting-form input[type="password"], .zoom-window-wrap .meeting-form input[type="email"] {
+  margin-bottom: 20px;
+  width: 30vw;
+  -webkit-appearance: none;
+  border-width: 0;
+  border-radius: 0;
+  color: #999;
+  font-size: 14px;
+  border: 1px solid #bbb;
+  padding-left: 16px;
+}
+
+#zmmtg-root {
+  display: none;
+}
+       
+.zoom-window-wrap .meeting-form .error {
+  border-color: red;
+}
+
+.zoom-window-wrap .meeting-view button:first-child {
+  margin-bottom: 10px;
+}
+
+.zoom-window-wrap .zoom-link {
+  background: #0e71eb;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 10px 15px 10px 16px;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.zoom-link:hover, .zoom-link:active {
+  background-color: #2681f2;
+}
+
+.zoom-window-wrap .zoom-link:focus {
+  outline: 0px !important;
+}
+
+.zoom-window-wrap .play-recoding-btn {
+  background-color: #8a8a8a;
+  border-color: #ccc;
+}
+
+.play-recoding-btn:hover {
+  background-color: grey;
+  border-color: grey;
+}
+
+.register-meeting-btn {
+  margin-bottom: 40px;
+  margin-top: 20px; 
+}
+
+.zoom-window-wrap .zoom-link {
+  margin: 5px 5px 10px 0;
+}
+
+.zoom-window-wrap button:first-child, .zoom-window-wrap .zoom-wp-form {
+  display: inline;
+  float: none;
+}
+
+.zoom-meeting-step1 .join-meeting-field {
+ margin-bottom: 1em;
+ display: inline-block;
+}
+
+.zoom-window-wrap .loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid rgb(24, 24, 24);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media only screen and (max-width: 950px) {
+  .zoom-window-wrap-half {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  body .zoom-window-wrap .meeting-form input[type="text"], .zoom-window-wrap .meeting-form input[type="password"], .zoom-window-wrap .meeting-form input[type="email"] {
+    width: 100%;
+  }
+}
+
+/* Large screens ----------- */
+/* @media screen and (min-width: 1600px) {
+ .zoom-iframe-container, .recording-container {
+    min-height: 32vw;
+  }
+} */
+/* @media only screen  and (min-width : 2400px) {
+ .zoom-iframe-container, .recording-container {
+    min-height: 42vh;
+  }
+} */
+
+/* smartphones, iPhone, tablets 
+@media only screen and (max-width:768px)  { 
+  .zoom-iframe-container, .recording-container {
+    padding-top: 75%; /* 4:3 Aspect Ratio 
+  }
+}
+*/
+
+/********* Recording Modal CSS *********/
+.zoom-meeting-countdown .registrationModal iframe {
+  width: 100%;
+  height: 105vh;
+  overflow: hidden;
+}
+
+.zoom-window-wrap .close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000000;
+  text-shadow: 0 1px 0 #ffffff;
+  filter: alpha(opacity=20);
+  opacity: 0.2;
+}
+.zoom-window-wrap .close:hover,
+.zoom-window-wrap .close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+.zoom-window-wrap button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.zoom-window-wrap .close:focus, .zoom-window-wrap .close:hover {
+  color: #000;
+  text-decoration: none;
+  opacity: .75;
+}
+.zoom-window-wrap .modal-open {
+  overflow: hidden;
+}
+.zoom-window-wrap .modal {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999999;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  cursor: move;
+}
+body .modal-backdrop {
+ background-color: transparent;
+ position: relative; 
+}
+.zoom-window-wrap .modal.fade .modal-dialog {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.zoom-window-wrap .modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.zoom-window-wrap .modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.zoom-window-wrap .modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+  overflow-y: initial;
+}
+.zoom-window-wrap .modal-content {
+  position: relative;
+  background-color: #ffffff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  outline: 0;
+}
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+.zoom-window-wrap .modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.zoom-window-wrap .modal-header .close {
+  margin-top: -2px;
+}
+body .zoom-window-wrap .modal-title{
+  margin: 0;
+  line-height: 1.42857143;
+  display: inline-block;
+}
+.zoom-window-wrap .meeting-view .modal-body {
+  padding: 15px;
+  overflow-y: auto;
+  font-size: 0.8em;
+}
+
+.zoom-window-wrap .modal-body {
+  position: relative;
+  max-height: 75vh;
+  padding: 0;
+  font-size: 1.1vw;
+  overflow-y: hidden;
+}
+.zoom-window-wrap .modal-body .dataTables_wrapper select {
+ height: inherit;
+}
+.zoom-window-wrap .modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+.zoom-window-wrap .modal-footer .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.zoom-window-wrap .modal-footer .btn-group .btn {
+  margin-left: -1px;
+}
+.zoom-window-wrap .modal-footer .btn-block {
+  margin-left: 0;
+}
+.zoom-window-wrap .modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+@media (min-width: 768px) {
+  .zoom-window-wrap .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+  .zoom-window-wrap .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  .zoom-window-wrap .modal-sm {
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .zoom-window-wrap .modal-lg {
+    width: 900px;
+  }
+}
+.clearfix:before,
+.clearfix:after,
+.zoom-window-wrap .modal-header:before,
+.zoom-window-wrap .modal-header:after,
+.zoom-window-wrap .modal-footer:before,
+.zoom-window-wrap .modal-footer:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after,
+.zoom-window-wrap .modal-header:after,
+.zoom-window-wrap .modal-footer:after {
+  clear: both;
+}
+/********* Recording Modal CSS ENDS *********/
+
+
+/********* Countdown CSS *********/
+ul.zoom-meeting-countdown {
+    list-style: none !important;
+    padding: 0;
+    display: block;
+    text-align: center;
+}
+ul.zoom-meeting-countdown li {
+  display: inline-block !important;
+  margin: 5px;
+}
+ul.zoom-meeting-countdown li span {
+    font-size: 4em;
+    font-weight: 300;
+    line-height: 1.1em;
+}
+ul.zoom-meeting-countdown li.seperator {
+  font-size: 3em;
+  line-height: 70px;
+  vertical-align: top;
+}
+
+ul.zoom-meeting-countdown li p {
+    color: #a7abb1;
+    font-size: 14px;
+}
+
+/********* Countdown CSS ENDS *********/
+
+/********* Vimeo Recording Addon CSS *********/
+body .dgv-embed-container .fluid-width-video-wrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/********* Vimeo Recording Addon CSS ENDS *********/
+
+/********* Calendar Button CSS *********/
+.meeting-view .dashicons-calendar-alt:first-child, .meeting-view .dashicons-video-alt2:first-child {
+  vertical-align: bottom;
+  margin-right: 4px;
+  font-size: 13px;
+  width: auto;
+  height: auto;
+}
+
+/********* Calendar Button CSS ENDS *********/

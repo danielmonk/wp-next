@@ -1,0 +1,1 @@
+class e{constructor(){this._init_events()}_init_events(){let e=document.querySelectorAll(".event-map__toggle")[0];e&&e.addEventListener("click",function(){this.chat_toggle()}.bind(this))}chat_toggle(){document.querySelectorAll(".event-map__side")[0].classList.toggle("closed")}}export default e;
